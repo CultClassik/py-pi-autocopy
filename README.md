@@ -26,8 +26,11 @@ sudo apt install -y \
 
 ## Clone this repository
 ```bash
-cd ~ &&\
+cd ~
+
 git clone  https://github.com/CultClassik/py-pi-autocopy.git
+
+cd py-pi-autocopy
 ```
 
 ## Setup and test
@@ -48,7 +51,9 @@ rm "${USB_MOUNT_POINT}/${DESTINATION_FILE}"
 
 
 # remove the usb device and then you can run this, then test by inserting the usb device to see if the file copies successfully
-cd py-pi-autocopy && ./setup.sh
+
+chmod +x ./setup.sh &&\
+./setup.sh
 ```
 
 
