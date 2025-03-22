@@ -1,0 +1,14 @@
+[Unit]
+Description=USB Auto Copy Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/$USER/py-pi-autocopy/pi-copy.py --source $SOURCE_FILE --usb $USB_MOUNT_POINT --destination $DESTINATION_FILE
+WorkingDirectory=/home/$USER/py-pi-autocopy/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
